@@ -2,13 +2,13 @@
 
 //We use already made Twitter OAuth library
 //https://github.com/mynetx/codebird-php
-require_once ('codebird.php');
+require_once ('twitter-oauth/codebird.php');
 
 //Twitter OAuth Settings, enter your settings here:
-$CONSUMER_KEY = '555DckpjT8Wuakr7LouOA';
-$CONSUMER_SECRET = 'ZyDVWB6jy21E8QBmeR1SHHm5g9ZCBgakTIRoiavuwMY';
-$ACCESS_TOKEN = '386147802-3cy6leJF4v5KkKQYK58eAo6nmW5tKi4RckzaOir2';
-$ACCESS_TOKEN_SECRET = '1vTzxLYGYuyhA7G46n69IXz30D5UJTJzdQ8HCZlfQko';
+$CONSUMER_KEY = 'mcbGBhdwLtzfrWDlxChYw';
+$CONSUMER_SECRET = 'z8iCAtt0AlHPg8RuPvtyyHovjzYZzwH6o98BGtG9s';
+$ACCESS_TOKEN = '1691569446-8eskBU2aZVJ4U8N5Fm5xgYqmypZiGHsOTtuFWtG';
+$ACCESS_TOKEN_SECRET = 'fyFnf6hjyBPw1EtDobpaBLORTbw1DplLYDildZ5ByU';
 
 //Get authenticated
 Codebird::setConsumerKey($CONSUMER_KEY, $CONSUMER_SECRET);

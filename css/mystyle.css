@@ -2,12 +2,11 @@
 /* CSS Document */
 /* */
 body {
-	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-	background-color: #333333;
+	background:#ffffff;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	height: 100%;
+	height:auto;
 	max-height: 100%;
 }
 /*body.loading {
@@ -15,139 +14,669 @@ body {
 		background-repeat:no-repeat;
 		background-image: url(loading.gif);
 }*/
-
+ul, menu, dir {
+list-style-type:none;
+}
+li{
+	text-align:left;
+}
 /* ~~ Element/tag selectors ~~ */
 ul, ol, dl { 
 	padding: 0;
 	margin: 0;
+	-webkit-margin-before:40px;
+	-webkit-margin-after:0;
+	-webkit-margin-start:0;
+	-webkit-margin-end:0;
+	-webkit-padding-start:0px;
 }
-h1, h2, h3, h4, h5, h6, p {
-	
-	margin-top: 0;	
+h1, h3, h5, h6{
 	padding-right: 15px;
 	padding-left: 15px;
 	text-align: center;
 }
-h1{
-	color: #CCCCCC;
-	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+h3{
+	-webkit-margin-before:0;
+	-webkit-margin-after:0;
+	-webkit-margin-start:0;
+	-webkit-margin-end:0;
+	color:#959595;
+	font-family:Arial;
+	text-align:left;
+	font-size:14pt;
+	background-color:#ffffff;
 }
-a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+h1{
+	margin:0px 0px 0px 0px !important;
+	padding:20px;
+	-webkit-margin-before:0;
+	-webkit-margin-after:0;
+	-webkit-margin-start:0;
+	-webkit-margin-end:0;
+	color:#464646;
+	font-family:Arial;
+	text-align:center;
+	font-size:46px;
+	background-color:#ffffff;
+}
+h1 p{
+	margin:0px 0px 0px 0px !important;
+	padding:0px;
+	-webkit-margin-before:0;
+	-webkit-margin-after:0;
+	-webkit-margin-start:0;
+	-webkit-margin-end:0;
+	color:#464646;
+	font-family:Arial;
+	text-align:center;
+	font-size:24px;
+}
+a img {
 	border: none;
 }
-
-/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
-a:link {
-	color:#414958;
-	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
-}
-a:visited {
-	color: #4E5869;
-	text-decoration: underline;
-}
-a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
-	text-decoration: none;
-}
-
-/* ~~ These are the columns for the layout. */
-.sidebar1 {
-	position:absolute;
-	left:0; 
-	overflow: auto;
-	height: 100%;
-	width: 33.33%;
-	z-index: 0;	
-	
-}
-.content {
-	position:absolute;
-	left:33%;
-	overflow: auto;
-	height: 100%;
-	width: 33.33%;
-	z-index: 1;	
-}
-.sidebar2 {
-	position:absolute;
-	left:66%;
-	overflow: auto;
-	height: 100%;
-	width: 33.33%;
-	z-index: 2;	
-}
-
-/* ~~ This grouped selector gives the lists in the .content area space ~~ */
-.content ul, .content ol { 
-	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
-}
-
-/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
-ul.nav {
-	list-style: none; /* this removes the list marker */
-	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
-	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
-}
-ul.nav li {
-	border-bottom: 1px solid #666; /* this creates the button separation */
-}
-ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
-	padding: 5px 5px 5px 15px;
-	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
-	text-decoration: none;
-	background-color: #8090AB;
-	color: #000;
-}
-ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
-	background-color: #6F7D94;
-	color: #FFF;
-}
-
-/* ~~ miscellaneous float/clear classes ~~ */
-.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
-	float: right;
-	margin-left: 8px;
-}
-.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
-	float: left;
-	margin-right: 8px;
-}
-.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the overflow:hidden on the .container is removed */
-	clear:both;
-	height:0;
-	font-size: 1px;
-	line-height: 0px;
-}
-table {
-	border-color: #999;
-	background-color: #666;
-	outline-color: #F90;
-	text-align: center;
-	box-shadow: 1em 2em 9px 15px #F60;
-	
-}
 .wrapper{
-	border: 1px solid #333333;
-	overflow: hidden;
-	width:100%;
-	height:100%;
+	text-align:center; 
+}
+label{
+	width:15em;
+	text-align:right;
+	margin-right:1%;
+	margin-left:40%; 
+	display:inline-block;
+	color:#0066cc;
+	float:left;
+}
+input{
+	color:#009999;
+	background:#cccccc;
 }
 #inputEntry{
-	color: #F60;
-		
+	color: #ff9933;
+	text-align: center;
 }
-#inputPromptTwt{
-	visibility: visible;
-	color: #CCC;
+
+.submit input{
+	margin-left:50%; 
+}
+table {
+	margin-left:48%;
+	color: #990033;
+	background-color: #999999;
+	outline-color: #ff9933;
+	text-align: center;
+	width: auto;
+}
+/* ~~ These are the columns for the layout. */
+.sidebar1 {
+	background: #d1d8e0;
+	position: absolute;
+	left:0;
+	overflow: auto;
+	height: 100%;
+	width: 1080px;
+	z-index: 2;
+}
+.content {
+	position: absolute;
+	left:33.33%;
+	overflow: auto;
+	height: 100%;
+	width: 1080px;
+	z-index: 1;
+}
+.sidebar2 {
+	position: absolute;
+	left: 66.66%;
+	overflow: auto;
+	height:100%;
+	width:1080px;
+	z-index: 0;
+}
+
+/*DATA SECTION*/
+
+.localinfo{
+	position: relative;
+	left:0px; 
+	background: #f4f4f4;
+	width: 1064px;
+	height: 550px;
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+.localinfo .information{
+	position:relative;
+	background:#f4f4f4;
+}
+.localinfo .information #date h2, .information .timeglobal h2{
+	color:#f7941d;
+	font-family:Arial;
+	font-size:30px; 
+	margin:0px 0px 20px 0px; 
+	-webkit-margin-before: 0;
+	-webkit-margin-after:30px;
+	-webkit-margin-start:0;
+	-webkit-margin-end: 0; 
+}
+.localinfo .information #date p, .information .timeglobal p{
+	margin:0px; 
+	color:#464646;
+	font-family:Arial;
+	font-size:18px;
+	-webkit-margin-before: 0;
+	-webkit-margin-after:-5px;
+	-webkit-margin-start:0;
+	-webkit-margin-end: 0; 
+}
+#date{
+	background:#f4f4f4;
+	position:absolute;
+	top:50px; 
+	width:266px;  
+	float:left;
+	text-align:center;  
+	-webkit-margin-before:0;
+	-webkit-margin-after:0;
+	-webkit-margin-start:0;
+	-webkit-margin-end:0;
+}
+#local .weatherItem{
+	background:#f4f4f4; 
+	position:relative;
+	left:50%;	
+	height:inherit;
+	width:532px;
+}
+#local .weatherItem .weatherImage{
+	position:absolute;
+	left:6px; 
+	top:50px; 
+	width:254px; 
+	height:254px; 
+	
+}
+#local .weatherItem  .weatherDesc{
+	position:absolute; 
+	display:block;
+	left:0px;
+	top:296px;
+	width:50%;
+	text-align:center;  
+	color:#f7941d;
+	font-family:Arial;
+	font-size:30px; 
+	font-weight: bold;
+}
+#local .weatherItem .weatherDesc p, #local .weatherTemp p{
+	margin:0px; 
+	color:#464646;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:normal;
+	line-height:normal;
+	-webkit-margin-before: 0;
+	-webkit-margin-after:-5px;
+	-webkit-margin-start:0;
+	-webkit-margin-end: 0; 
+}
+#local .weatherItem  .weatherTemp{
+	position:absolute; 
+	display:block;
+	left:266px;
+	top:296px;
+	width:50%;
+	text-align:center;
+	color:#f7941d;
+	font-family:Arial;
+	font-size:30px;
+	font-weight:bold; 
+}
+#local #thermo{
+	position:absolute;
+	top:50px; 
+	left:798px; 
+	width:254px; 
+	height:254px;
+	background-image:url(../img/TempIcon.png);
+}
+/*clock Styling */
+#clock {
+	position:absolute; 
+	width:254px;
+	height:254px;
+	margin:0px auto 0 auto;
+	background:url(../img/Clockback.png);
+	list-style:none;
+	left:266px;
+	top:28px; 
+}
+#sec, #min, #hour {
+	position:absolute; 
+	width:254px;
+	height:254px;
+	top:0px;
+	left:0px;
+}
+#sec{
+	background:url(../img/ClockSec.png);
+	z-index:3	
+}
+#min{
+	background:url(../img/ClockMinute.png);
+	z-index:2;
+}
+#hour{
+	background:url(../img/ClockHour.png);
+	z-index:1;
+}
+.information .timeglobal{
+	position:absolute; 
+	left:297px;
+	top:296px; 
+	text-align:center;
+}
+.information .timeglobal h2{
+	margin:0px 0px 0px 0px; 
+	-webkit-margin-before: 0;
+	-webkit-margin-after:0;
+	-webkit-margin-start:0;
+	-webkit-margin-end: 0; 
+}
+/*Map Stylings*/
+.mapmain{
+	position:relative; 
+	left:0px; 
+	top:16px;
+	width:524px; 
+	height:368px;
+	background-color:#f4f4f4;
+}
+.map img{
+	position:absolute;
+	left:20px; 
+	top:57px;
+	width:480px;
+	height:256px;
+}
+/* Weather Region section*/
+#weather, #weatherTwo, #weatherThree, #weatherFour, #weatherFive, #weatherSix{
+	background-color:#f4f4f4;
+	position:absolute;
+	width:254px;
+	height:368px;
+}
+#weather{
+	left:540px;
+	top:566px; 
+}
+#weatherTwo{
+	left:810px;
+	top:566px; 
+}
+#weatherThree{
+	left:0px;
+	top:950px;
+}
+#weatherFour{
+	left:270px;
+	top:950px;
+} 
+#weatherFive{
+	left:540px;
+	top:950px;
+}
+#weatherSix{
+	left:810px;
+	top:950px;
+}
+#weather .weatherItem  .weatherDesc,#weather .weatherItem  .weatherTemp, #weather .weatherItem  .weatherCity, #weather .timeglobal{
+	color:#9e0039;
+}
+#weatherTwo .weatherItem  .weatherDesc,#weatherTwo .weatherItem  .weatherTemp,#weatherTwo .weatherItem  .weatherCity, #weatherTwo .timeglobal{
+	color:#8dc63f;
+}
+#weatherThree .weatherItem  .weatherDesc,#weatherThree .weatherItem  .weatherTemp,#weatherThree .weatherItem  .weatherCity, #weatherThree .timeglobal{
+	color:#3cb878;
+}
+#weatherFour .weatherItem  .weatherDesc,#weatherFour .weatherItem  .weatherTemp, #weatherFour .weatherItem  .weatherCity, #weatherFour .timeglobal{
+	color:#54391e;
+}
+#weatherFive .weatherItem  .weatherDesc,#weatherFive .weatherItem  .weatherTemp,#weatherFive .weatherItem  .weatherCity, #weatherFive .timeglobal{
+	color:#0072bc;
+}
+#weatherSix .weatherItem  .weatherDesc,#weatherSix .weatherItem  .weatherTemp,#weatherSix .weatherItem  .weatherCity, #weatherSix .timeglobal{
+	color:#959595;
+}
+#weather .weatherItem  .weatherDesc, #weatherTwo .weatherItem  .weatherDesc, #weatherThree .weatherItem  .weatherDesc, #weatherFour .weatherItem  .weatherDesc, #weatherFive .weatherItem  .weatherDesc, #weatherSix .weatherItem  .weatherDesc{
+	position:absolute; 
+	display:block;
+	left:15px;
+	top:170px;
+	width:100%;
+	text-align:left; 
+	font-family:Arial;
+	font-size:24px; 
+	font-weight: bold;
+}
+#weather .weatherItem  .weatherTemp, #weatherTwo .weatherItem  .weatherTemp, #weatherThree .weatherItem  .weatherTemp, #weatherFour .weatherItem  .weatherTemp, #weatherFive .weatherItem  .weatherTemp, #weatherSix .weatherItem  .weatherTemp{
+	position:absolute;
+	padding:0px; 
+	display:block;
+	left:15px;
+	top:240px;
+	width:100%;
+	text-align:left;
+	font-family:Arial;
+	font-size:24px;
+	font-weight:bold; 
+}
+#weather .weatherItem .weatherDesc p, #weather .timeglobal p, #weather .weatherTemp p, #weatherTwo .weatherItem .weatherDesc p, #weatherTwo .weatherTemp p, #weatherTwo .timeglobal p, #weatherThree .weatherItem .weatherDesc p, #weatherThree .weatherTemp p, #weatherThree .timeglobal p, #weatherFour .weatherItem .weatherDesc p, #weatherFour .weatherTemp p, #weatherFour .timeglobal p, #weatherFive .weatherItem .weatherDesc p, #weatherFive .weatherTemp p,#weatherFive .timeglobal p, #weatherSix .weatherItem .weatherDesc p, #weatherSix .weatherTemp p, #weatherSix .timeglobal p{
+	margin:0px;
+	padding:0px;
+	color:#464646;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:normal;
+	line-height:normal;
+	-webkit-margin-before: 0;
+	-webkit-margin-after:0px;
+	-webkit-margin-start:0;
+	-webkit-margin-end: 0; 
+}
+#weather .weatherItem  .weatherCity,#weatherTwo .weatherItem  .weatherCity,#weatherThree .weatherItem  .weatherCity,#weatherFour .weatherItem  .weatherCity,#weatherFive .weatherItem  .weatherCity,#weatherSix .weatherItem  .weatherCity{
+	position:absolute;
+	padding:0px; 
+	display:block;
+	left:15px;
+	top:50px;
+	width:100%;
+	text-align:left;
+	font-family:Arial;
+	font-size:24px;
+	font-weight:bold; 
+}
+#weather .timeglobal, #weatherTwo .timeglobal, #weatherThree .timeglobal, #weatherFour .timeglobal, #weatherFive .timeglobal, #weatherSix .timeglobal{
+	position:absolute;
+	left:10px;
+	top:100px;
+	width:100%;
+	
+}
+#weather .timeglobal h2, #weatherTwo .timeglobal h2, #weatherThree .timeglobal h2, #weatherFour .timeglobal h2, #weatherFive .timeglobal h2, #weatherSix .timeglobal h2{
+	padding:0px; 
+	display:block;
+	text-align:left;
+	font-family:Arial;
+	font-size:24px;
+	font-weight:bold;
+	-webkit-margin-before: 0;
+	-webkit-margin-after:0px;
+	-webkit-margin-start:0;
+	-webkit-margin-end: 0; 
+}
+
+/*rss portion*/
+
+.rsshead{
+	position:relative;
+	top:416px; 
+	left:0px;
+	width:1064px; 
+	height:160px;
+	background-color:#f4f4f4;
+}
+.rsshead h3{
+	color:#959595;
+	font-family:Arial;
+	text-align:left;
+	font-size:18px;
+	background-color:#ffffff;
+	padding:10px 0px 10px 15px;
+	-webkit-margin-before:0px;
+	-webkit-margin-after:0px;
+	-webkit-margin-start:0px;
+	-webkit-margin-end:0;
+}
+.rsshead h2{
+	font-size:36px; 
+	font-family:Arial;
+	font-weight:bold; 
+	padding:0px 0px 0px 15px;
+	-webkit-margin-before:30px;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+}
+.rsshead p{
+	font-size:18px; 
+	font-family:Arial;
+	color:#464646;
+	display: block;
+	padding:0px 0px 0px 15px;
+	-webkit-margin-before:0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+}
+#feed{
+	position:relative;
+	top:432px;
+	left:0px; 
+}
+.data{
+	background-color:#f4f4f4;
+}
+.title, .title a:link, .title a:visited{
+	color:inherit;
+	font-family:'Merriweather',serif;
+	text-decoration:none;
+	padding:0px 0px 0px 8px; 
+	display: block;
+	-webkit-margin-before:20px;
+	-webkit-margin-after: 10px;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	font-weight: bold;
+}
+.big .title, .big .title a:link, .big .title a:visited{
+	font-size:24px;
+}
+.small .title, .small .title a:link, .small .title a:visited{
+	font-size:14px;
+}
+#rsscontent{
+	font-family:'Merriweather',serif;
+	color:#464646;
+	padding:0px 0px 0px 15px;
+	display: block;
+	text-align:left;
+	-webkit-margin-before:0px;
+	-webkit-margin-after:5px;
+	-webkit-margin-start:0px;
+	-webkit-margin-end:0px; 
+}
+.big #rsscontent{
+	font-size:18px; 
+}
+.small #rsscontent{
+	font-size:12px; 
+}
+.rsstitle {
+	color:#ffffff;
+	font-family:Arial;
+	text-align:left;
+	font-size:14pt;
+	padding:0px 0px 0px 15px;
+	-webkit-margin-before:0;
+	-webkit-margin-after:0;
+	-webkit-margin-start:0;
+	-webkit-margin-end:0;
+}
+.rsstitle a:link, .rsstitle a:visited{
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14pt;
+	text-decoration:none; 
+	text-align:left;
+}
+#dataone{
+	position:absolute;
+	top:0px;
+	left:0px;  
+	width:524px;
+	height:524px;
+}
+#datatwo{
+	position:absolute;
+	top:0px;
+	left:540px;  
+	width:524px;
+	height:254px;
+}
+#datathree{
+	position:absolute;
+	top:270px;
+	left:540px;  
+	width:254px;
+	height:254px;
+}
+#datafour{
+	position:absolute;
+	top:270px;
+	left:810px;  
+	width:254px;
+	height:254px;
+}
+#datafive{
+	position:absolute;
+	top:540px;
+	left:0px;  
+	width:524px;
+	height:254px;
+}
+#datasix{
+	position:absolute;
+	top:540px;
+	left:540px;  
+	width:254px;
+	height:254px;
+}
+#dataseven{
+	position:absolute;
+	top:540px;
+	left:810px;  
+	width:254px;
+	height:254px;
+}
+#dataeight{
+	position:absolute;
+	top:810px;
+	left:0px;  
+	width:254px;
+	height:254px;
+}
+#datanine{
+	position:absolute;
+	top:810px;
+	left:270px;  
+	width:254px;
+	height:254px;
+}
+#dataten{
+	position:absolute;
+	top:810px;
+	left:540px;  
+	width:524px;
+	height:524px;
+}
+#dataeleven{
+	position:absolute;
+	top:1080px;
+	left:0px;  
+	width:524px;
+	height:254px;
+}
+#datatweleve{
+	position:absolute;
+	top:1350px;
+	left:0px;  
+	width:524px;
+	height:524px;
+}
+#datathirteen{
+	position:absolute;
+	top:1350px;
+	left:540px;  
+	width:524px;
+	height:254px;
+}
+#datafourteen{
+	position:absolute;
+	top:1620px;
+	left:540px;  
+	width:254px;
+	height:254px;
+}
+#datafifteen{
+	position:absolute;
+	top:1620px;
+	left:810px;  
+	width:254px;
+	height:254px;
+}
+#datasixteen{
+	position:absolute;
+	top:1890px;
+	left:0px;  
+	width:524px;
+	height:254px;
+}
+#dataseventeen{
+	position:absolute;
+	top:1890px;
+	left:540px;  
+	width:254px;
+	height:254px;
+}
+#dataeightteen{
+	position:absolute;
+	top:1890px;
+	left:810px;  
+	width:254px;
+	height:254px;
+}
+#datanineteen{
+	position:absolute;
+	top:2160px;
+	left:0px;  
+	width:254px;
+	height:254px;
+}
+#datatwenty{
+	position:absolute;
+	top:2160px;
+	left:270px;  
+	width:254px;
+	height:254px;
+}
+#datatwentyone{
+	position:absolute;
+	top:2160px;
+	left:540px;  
+	width:524px;
+	height:254px;
 }
 /* this is where the Twitter Feed Stuff lives*/	
 #info {
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
 	border-radius:5px;				
-	background:#C90;
+	background:#cccccc;
 	border:1px solid  #fbeed5;
 	width:100%;
-	max-width:900px;
+	max-width:100%;
 	margin:0 auto 10px auto;
 }
 	
@@ -162,50 +691,187 @@ table {
 
 #info p {
 	margin:5px 0 0 0;
-}	
+}
 
+	
+/*TWITTER SECTION*/
 #jstwitter {
 	position: relative;
 }
 /* this is the Background box*/
 #jstwitter .item {
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
-	border-radius:5px;
-	-webkit-box-shadow:0 0 3px 1px rgba(100,100,100,0.2);
-	-moz-box-shadow:0 0 3px 1px rgba(100,100,100,0.2);
-	box-shadow:0 0 3px 1px rgba(100,100,100,0.2);						
+	position:relative;
+	height:auto;
+	min-height:200px; 
+	max-height:100%; 
 	overflow:hidden;
-	background:#A0A0A0;
+	border: solid 1px #d2d2d2; 
+	background-color:#eaeaea;
+	background-repeat:repeat-x;
+	background: -webkit-linear-gradient(top,#fefefe,#eaeaea);
 }
-		
-#jstwitter .tweet-wrapper {
-	padding:10px;
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	box-sizing:border-box;								
-	line-height:16px;				
-}
-	 
 #jstwitter .item a {
 	text-decoration:none;
-	color: #03a8e5;
+	color:#0066cc;
 }
-
-#jstwitter .item img {
-	width:100%;
-}	
 
 #jstwitter .item a:hover {
 	text-decoration: underline;
+	color:#0066cc;
 }
-
-#jstwitter .item .text {
+#jstwitter .item .time{
+	position:absolute;
+	line-height:100%;
+	text-align:center;
+	color:#cccccc;
+	width:12%; 
+	height:100%;
+	max-height:100%;
+	min-height:200px;
+}
+#jstwitter .item .time span{
+	position:relative; 
+	display:table-cell;
+	vertical-align:middle;
+	line-height:100%;
+}
+#jstwitter .item .tweet-wrapper{
+	position:relative;
+	padding:10px;
+	overflow:hidden;
+	left:130px;
+	height:auto;
+	max-height:100%;
+	min-height:inherit;
+	max-width:950px;
+	width:88%; 
+	background-color:#ffffff;
+	background-repeat:repeat-x;
+	background: -webkit-linear-gradient(top,#ffffff,#f0f0f0);
+}
+#jstwitter .item .tweet-wrapper .profile{
+	position:relative;
+	left:20px;
+	top:63px;
+	float:left; 
+	width:73px;
+	height:73px;
+}
+#jstwitter .item .tweet-wrapper .profile img{
+	width:inherit; 
+	height:inherit; 
+	
+}
+#jstwitter .item .tweet-wrapper .text{
 	display:block;
+	position:relative;
 	color:#333;
+	font-size:18pt;
+	padding: 30px;
+	border: solid 1px #d2d2d2;
+	left:100px;
+	text-align:left;
+	width:78%; 
+}
+#jstwitter .item .tweet-wrapper .img{
+	float:left;
+	position:relative;
+	left:25%; 
+}
+#jstwitter .item .tweet-wrapper .user{
+	font-style: italic;
+	color: #0066cc;
+	text-align:center;
+	font-size:24pt;
+	position:relative;
 }
 
-#jstwitter .item .time, #jstwitter .tweet-wrapper .user {
+#jsuser {
+	position: relative;
+}
+/* this is the Background box*/
+#jsuser .item {
+	position:relative;
+	height:auto;
+	min-height:200px; 
+	max-height:100%; 
+	overflow:hidden;
+	border: solid 1px #d2d2d2; 
+	background-color:#eaeaea;
+	background-repeat:repeat-x;
+	background: -webkit-linear-gradient(top,#fefefe,#eaeaea);
+}
+#jsuser .item a {
+	text-decoration:none;
+	color:#0066cc;
+}
+
+#jsuser .item a:hover {
+	text-decoration: underline;
+	color:#0066cc;
+}
+#jsuser .item .time{
+	position:absolute;
+	line-height:100%;
+	text-align:center;
+	color:#cccccc;
+	width:12%; 
+	height:100%;
+	max-height:100%;
+	min-height:200px;
+}
+#jsuser .item .time span{
+	display:table-cell;
+	vertical-align:middle;
+	line-height:100%;
+}
+#jsuser .item .tweet-wrapper{
+	position:relative;
+	padding:10px;
+	overflow:hidden;
+	left:130px;
+	height:auto;
+	max-height:100%;
+	min-height:inherit;
+	max-width:950px;
+	width:88%; 
+	background-color:#ffffff;
+	background-repeat:repeat-x;
+	background: -webkit-linear-gradient(top,#ffffff,#f0f0f0);
+}
+#jsuser .item .tweet-wrapper .profile{
+	position:relative;
+	left:20px;
+	top:63px;
+	float:left; 
+	width:73px;
+	height:73px;
+}
+#jsuser .item .tweet-wrapper .profile img{
+	width:inherit; 
+	height:inherit; 
+	
+}
+#jsuser .item .tweet-wrapper .text{
+	display:block;
+	position:relative;
+	color:#333;
+	font-size:18pt;
+	padding: 30px;
+	border: solid 1px #d2d2d2;
+	left:100px;
+	text-align:left;
+	width:78%; 
+}
+#jsuser .item .tweet-wrapper .img{
+	float:left;
+	position:relative;
+	left:25%; 
+}
+#jsuser .item .tweet-wrapper .user{
 	font-style: italic;
-	color: #FC0;
+	color: #0066cc;
+	text-align:center;
+	font-size:24pt;
+	position:relative;
 }

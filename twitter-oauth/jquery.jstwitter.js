@@ -9,17 +9,19 @@ $(function() {
 	    search: '', //leave this blank if you want to show user's tweet
 		hash: '',
 	    user: '', //username
-	    numTweets: 45, //number of tweets
-	    appendTo: '#jstwitter',
-	    useGridalicious: true,
-	    template: '<div class="item">{IMG}<div class="tweet-wrapper"><span class="text">{TEXT}</span>\
-	               <span class="time"><a href="{URL}" target="_blank">{AGO}</a></span>\
-	               by <span class="user">{USER}</span></div></div>',
+	    numTweets:500, //number of tweets
+	    appendTo: '',
+	    useGridalicious: false,
+	    template: '<div class="item"> <div class="time"><p>{AGO}</p></div>\
+				   <div class="tweet-wrapper">\
+				   <div class="profile"><img href="{PHO}" src="{PHOP}"/></div>\
+				   <div class="user">{USER}</div>\
+				   <div class="text">{TEXT}</div><div class="img">{IMG}</div></div></div>',
 	     
 	    // core function of jqtweet
 	    // https://dev.twitter.com/docs/using-search
 	    loadTweets: function() {
-			console.log("We Made it here"); 
+			//console.log("We Made it here"); 
 	        var request;
 	         
 	        // different JSON request {hash|user}
@@ -57,7 +59,7 @@ $(function() {
 	                    url = 'http://twitter.com/' + data[i].user.screen_name + '/status/' + data[i].id_str;
 	                    try {
 	                      if (data[i].entities['media']) {
-	                        img = '<a href="' + url + '" target="_blank"><img src="' + data[i].entities['media'][0].media_url + '" /></a>';
+	                        img = '<img src="' + data[i].entities['media'][0].media_url + '" />';
 	                      }
 	                    } catch (e) {  
 	                      //no media
@@ -65,6 +67,8 @@ $(function() {
 	                  
 	                    $(JQTWEET.appendTo).append( JQTWEET.template.replace('{TEXT}', JQTWEET.ify.clean(data[i].text) )
 	                        .replace('{USER}', data[i].user.screen_name)
+							.replace('{PHO}', data[i].user.profile_image_url)
+							.replace('{PHOP}', data[i].user.profile_image_url)
 	                        .replace('{IMG}', img)                                
 	                        .replace('{AGO}', JQTWEET.timeAgo(data[i].created_at) )
 	                        .replace('{URL}', url )			                            
@@ -79,7 +83,7 @@ $(function() {
 			                //run grid-a-licious
 											$(JQTWEET.appendTo).gridalicious({
 												gutter: 13, 
-												width: 200, 
+												width: 1080, 
 												animate: true
 											});	                   
 										}                  
